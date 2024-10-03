@@ -49,7 +49,7 @@ def processar_transacoes(cliente_socket, endereco):
                             contas[numero_conta]["saldo"] -= valor
                             resultado = f"Saque de {valor} realizado com sucesso."
                         else:
-                            resultado = "Saldo insuficiente para saque."
+                            resultado = f"Saldo insuficiente para saque de {valor}."
 
                     elif tipo == "consulta":
                         saldo = contas[numero_conta]["saldo"]
